@@ -6,6 +6,7 @@ def answer_file(n)
 end
 
 def input_file(n)
+  n = $& if n =~ /\A\d+/
   (Pathname.new(__dir__) + 'input').tap(&:mkpath) + "#{n}.in"
 end
 
